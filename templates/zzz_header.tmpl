@@ -4,32 +4,14 @@
 <%def name="html_header()">
     <header id="header" role="banner">
         ${html_site_title()}
-        ##${html_translation_header()}
-        ##${html_navigation_links()}
+        ${html_navigation_links()}
         ##%if search_form:
             ##<div class="searchform" role="search">
                 ##${search_form}
             ##</div>
         ##%endif
     </header>
-    ##${template_hooks['page_header']()}
-
-    ##<header class="header" >
-    ##<div class="container">
-        ##<div class="scroll top">
-            ##<a href='#'><i class="icon-chevron-up icon-large"></i></a>
-        ##</div>
-
-        ##<div class=navigation>
-            ##<ul>
-                ##{% for section in SECTIONS %}
-                ##<li><a href="{{ SITEURL }}/{{ section[1]}}">{{ section[0] }}</a> </li>
-                ##{% endfor %}
-            ##</ul>
-        ##</div>
-
-    ##</div>
-    ##<div class='separator clearfix'></div>
+    <div class='separator clearfix'></div>
 </%def>
 
 
@@ -59,4 +41,34 @@
             </div>
         </div>
     </div>
+</%def>
+
+
+<%def name="html_navigation_links()">
+    <nav id="menu" role="navigation">
+    <ul>
+    %for url, text in navigation_links[lang]:
+        % if isinstance(url, tuple):
+            <li> ${text}
+            <ul>
+            %for suburl, text in url:
+                % if rel_link(permalink, suburl) == "#":
+                    <li class="active"><a href="${permalink}">${text}</a></li>
+                %else:
+                    <li><a href="${suburl}">${text}</a></li>
+                %endif
+            %endfor
+            </ul>
+        % else:
+            % if rel_link(permalink, url) == "#":
+                <li class="active"><a href="${permalink}">${text}</a></li>
+            %else:
+                <li><a href="${url}">${text}</a></li>
+            %endif
+        % endif
+    %endfor
+    ${template_hooks['menu']()}
+    ${template_hooks['menu_alt']()}
+    </ul>
+    </nav>
 </%def>
