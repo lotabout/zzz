@@ -132,6 +132,56 @@ nav a:hover,
 }
 
 
+/* footer */
+.footer {
+    border-top: 1px dotted #ddd;
+    padding-top: 20px;
+    margin-top:15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+}
+.footer a {
+    color: #777;
+}
+.footer p {
+    margin: 0;
+    line-height: 40px;
+}
+
+.pull-left {
+    float:left;
+}
+.pull-right {
+    float:right;
+}
+
+
+.social a,
+.pagination a,
+.scroll a {
+  display: inline-block;
+}
+
+
+.social a {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 15px 5px;
+}
+.social ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+}
+.social ul li {
+    display: inline;
+    margin: 0 2px;
+    padding: 0;
+}
+
 /* setting size according to screen */
 
 @media (min-width: 641px) {

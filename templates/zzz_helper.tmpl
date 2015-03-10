@@ -28,7 +28,6 @@ lang="${lang}">
     <title>${title|striphtml} | ${blog_title|striphtml}</title>
 
     ${html_stylesheets()}
-    ${html_feedlinks()}
     %if permalink:
       <link rel="canonical" href="${abs_link(permalink)}">
     %endif
@@ -68,6 +67,7 @@ lang="${lang}">
             <link href="/assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
         %endif
     %else:
+        <link href="/assets/css/font-awesome.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/rst.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/code.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
@@ -80,16 +80,3 @@ lang="${lang}">
     %endif
 </%def>
 
-<%def name="html_feedlinks()">
-    %if rss_link:
-        ${rss_link}
-    %elif generate_rss:
-        %if len(translations) > 1:
-            %for language in translations:
-                <link rel="alternate" type="application/rss+xml" title="RSS (${language})" href="${_link('rss', None, language)}">
-            %endfor
-        %else:
-            <link rel="alternate" type="application/rss+xml" title="RSS" href="${_link('rss', None)}">
-        %endif
-    %endif
-</%def>

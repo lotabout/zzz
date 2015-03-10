@@ -1,0 +1,61 @@
+## -*- coding: utf-8 -*-
+<%namespace name="base" file="base_helper.tmpl" import="*"/>
+
+<%def name="html_footer()">
+
+    <footer class='footer'>
+        <div class="container clearfix">
+            <div class="social pull-left">
+                <ul>
+                    %if email:
+                    <a href="mailto:email" target="_blank">
+                        <li><i class="icon-envelope icon-large"></i> 
+                        </li>
+                    </a>
+                    %endif
+
+                    %if twitter:
+                    <a href="http://twitter.com/{{ TWITTER_USERNAME }}" target="_blank">
+                        <li><i class="icon-twitter-sign icon-large"></i>
+                        </li>
+                    </a>
+                    %endif
+
+                    %if github:
+                    <a href="https://github/${github}" target="_blank">
+                        <li><i class="icon-github-sign icon-large"></i>
+                        </li>
+                    </a>
+                    %endif
+
+                    ${html_feedlinks()}
+                        <li> <i class="icon-rss icon-large"></i> 
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            %if content_footer:
+            <div class="copyright pull-right">
+                <p>${content_footer}</p>
+                ${template_hooks['page_footer']()}
+            </div>
+            %endif
+            ${template_hooks['page_footer']()}
+        </div>
+    </footer>
+</%def>
+
+<%def name="html_feedlinks()">
+    %if rss_link:
+        ${rss_link}
+    %elif generate_rss:
+        %if len(translations) > 1:
+            %for language in translations:
+                <a rel="alternate" type="application/rss+xml" title="RSS (${language})" href="${_link('rss', None, language)}">
+            %endfor
+        %else:
+            <a rel="alternate" type="application/rss+xml" title="RSS"
+            href="${_link('rss', None)}">
+        %endif
+    %endif
+</%def>
