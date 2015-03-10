@@ -49,7 +49,7 @@
   perspective: 1000;
   margin: -15px auto 0px;
   position: relative;
-  display:inline-block;
+  /*display:inline-block;*/
 }
 .flip_container:hover .front {
   -webkit-transform: rotateY(180deg);

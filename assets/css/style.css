@@ -1,3 +1,46 @@
+
+/*header*/
+.header {
+    position: fixed;
+    z-index: 199;
+    display: block;
+}
+
+.header {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top:15px;
+    opacity: 1;
+}
+
+/* container */
+.container {
+    margin: 0px auto;
+    padding: 0;
+}
+
+.header .container {
+    position: relative;
+}
+
+/* scroll top */
+.scroll {
+    position: absolute;
+    z-index: 20;
+    left: 0px;
+}
+
+/* brand banner */
+.brand {
+    position: absolute;
+    left: 0px;
+    z-index: 50;
+    width: 35%;
+    text-align: left;
+}
+
 .separator,
 nav,
 .scroll,
@@ -13,17 +56,6 @@ nav,
     transition: left 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s, color 0.5s ease-in-out 0s;
 }
 
-.brand {
-    position: absolute;
-    left: 0px;
-    z-index: 50;
-}
-
-.brand {
-    left: 0;
-    width: 35%;
-    text-align: left;
-}
 .dynamic .brand {
     left: 65%;
     text-align: right;
@@ -91,10 +123,34 @@ h3 a:hover,
 .tags a:hover,
 .tagcloud a:hover,
 .index-tag a:hover,
-nav:hover,
+nav a:hover,
 .scroll a:hover,
 .social a:hover
 {
     background-color: #777;
     color: #FCFCFA;
 }
+
+
+/* setting size according to screen */
+
+@media (min-width: 641px) {
+    .container {
+        width: 600px;
+    }
+
+    nav a {
+        font-size: 22px;
+        line-height: 22px;
+        padding: 12px 8px 9px;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .container {
+        width: 780px;
+    }
+}
+

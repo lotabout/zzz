@@ -2,16 +2,23 @@
 <%namespace name="base" file="base_helper.tmpl" import="*"/>
 
 <%def name="html_header()">
-    <header id="header" role="banner">
-        ${html_site_title()}
-        ${html_navigation_links()}
-        ##%if search_form:
-            ##<div class="searchform" role="search">
-                ##${search_form}
-            ##</div>
-        ##%endif
+
+    <header id="header" class="header transparent">
+        <div class="container">
+            <div class="scroll top">
+                <a href='#'><i class="icon-chevron-up icon-large"></i></a>
+            </div>
+
+            ${html_site_title()}
+            ${html_navigation_links()}
+            ##%if search_form:
+                ##<div class="searchform" role="search">
+                    ##${search_form}
+                ##</div>
+            ##%endif
+        </div>
+        <div class='separator clearfix'></div>
     </header>
-    <div class='separator clearfix'></div>
 </%def>
 
 
