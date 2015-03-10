@@ -1,0 +1,62 @@
+## -*- coding: utf-8 -*-
+<%namespace name="base" file="base_helper.tmpl" import="*"/>
+
+<%def name="html_header()">
+    <header id="header" role="banner">
+        ${html_site_title()}
+        ##${html_translation_header()}
+        ##${html_navigation_links()}
+        ##%if search_form:
+            ##<div class="searchform" role="search">
+                ##${search_form}
+            ##</div>
+        ##%endif
+    </header>
+    ##${template_hooks['page_header']()}
+
+    ##<header class="header" >
+    ##<div class="container">
+        ##<div class="scroll top">
+            ##<a href='#'><i class="icon-chevron-up icon-large"></i></a>
+        ##</div>
+
+        ##<div class=navigation>
+            ##<ul>
+                ##{% for section in SECTIONS %}
+                ##<li><a href="{{ SITEURL }}/{{ section[1]}}">{{ section[0] }}</a> </li>
+                ##{% endfor %}
+            ##</ul>
+        ##</div>
+
+    ##</div>
+    ##<div class='separator clearfix'></div>
+</%def>
+
+
+<%def name="html_site_title()">
+    <div class="brand">
+        <div class="flip_container">
+            <div class="flipper">
+                <div class="front">
+                    <p><a href="${abs_link('/')}" title="${blog_title}" rel="home">
+                    %if logo_url:
+                        <img src="${logo_url}" alt="${blog_title}" id="logo">
+                    %endif
+
+                    %if show_blog_title:
+                        <span id="blog-title">${blog_title}</span>
+                    %endif
+                    </a></p>
+                </div>
+
+                %if show_blog_title and blog_description:
+                <div class="back">
+                    <p><a href="${abs_link('/')}" title="${blog_description}" rel="home">
+                        <span id="blog-description">${blog_description}</span>
+                    </a></p>
+                </div>			
+                %endif
+            </div>
+        </div>
+    </div>
+</%def>
