@@ -18,5 +18,8 @@ ${template_hooks['extra_head']()}
         </div>
     </div>
     ${footer.html_footer()}
+    ${body_end}
+    ${template_hooks['body_end']()}
+    ${zzz.late_load_js()}
 </body>
 </html>

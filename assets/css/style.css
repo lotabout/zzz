@@ -67,6 +67,30 @@ body {
     text-align: left;
 }
 
+/* dynamic header */
+.dynamic .scroll,
+.navigation {
+    opacity: 1;
+}
+.scroll,
+.dynamic .navigation {
+    opacity: 0;
+}
+.scroll a,
+.dynamic .navigation a {
+    pointer-events: none;
+    cursor: default;
+}
+.dynamic .scroll a {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.dynamic .brand {
+    left: 65%;
+    text-align: right;
+}
+
 .separator,
 nav,
 .scroll,
@@ -222,6 +246,16 @@ nav a:hover,
         padding-bottom: 21px;
         margin-bottom: 0px;
     }
+
+    .scroll a, .brand a {
+        font-size: 22px;
+        line-height: 4px
+    }
+
+    .scroll a {
+        padding: 18px 15px 13px 15px;
+        margin-top:-15px;
+    }
 }
 
 @media (min-width: 641px) {
@@ -246,6 +280,15 @@ nav a:hover,
     .separator {
         padding-bottom: 28px;
         margin-bottom: 28px;
+    }
+
+    .scroll, .brand {
+        height: 36px;
+    }
+
+    .scroll a, .brand a {
+        font-size: 28px;
+        line-height: 17px
     }
 }
 
