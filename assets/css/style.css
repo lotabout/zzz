@@ -1,0 +1,100 @@
+.separator,
+nav,
+.scroll,
+.brand {
+    line-height: 0;
+    vertical-align: top;
+}
+
+
+.scroll,
+nav,
+.brand {
+    transition: left 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s, color 0.5s ease-in-out 0s;
+}
+
+.brand {
+    position: absolute;
+    left: 0px;
+    z-index: 50;
+}
+
+.brand {
+    left: 0;
+    width: 35%;
+    text-align: left;
+}
+.dynamic .brand {
+    left: 65%;
+    text-align: right;
+}
+
+nav a,
+.scroll a {
+    color: #777;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.scroll,
+nav,
+.brand {
+    transition: left 0.5s ease-in-out 0s, opacity 0.5s ease-in-out 0s, color 0.5s ease-in-out 0s;
+}
+.dynamic .scroll,
+nav {
+    opacity: 1;
+}
+.scroll,
+.dynamic nav {
+    opacity: 0;
+}
+.scroll a,
+.dynamic nav a {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+nav {
+    position: absolute;
+    right: 0px;
+    z-index: 40;
+}
+
+.front a ,
+.back a ,
+.tags a ,
+.archive a,
+.pagination a,
+.scroll a,
+.social a,
+nav a {
+    text-decoration: none;
+}
+
+a.active,
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+.pagination a:hover,
+.archive a:hover,
+.tags a:hover,
+.tagcloud a:hover,
+.index-tag a:hover,
+nav:hover,
+.scroll a:hover,
+.social a:hover
+{
+    background-color: #777;
+    color: #FCFCFA;
+}
