@@ -342,6 +342,14 @@ h3 a:hover,
     color: #FCFCFA;
 }
 
+/* offseting anchor tag link */
+:target:before {
+    content:"";
+    display:block;
+    height:50px; /* fixed header height*/
+    margin:-50px 0 0; /* negative fixed header height */
+}
+
 /* setting size according to screen */
 @media (min-width: 0px) {
 
@@ -490,3 +498,5 @@ a.red:hover  {
     color: #FCFCFA;
     background-color: #FF4136;
 }
+
+
