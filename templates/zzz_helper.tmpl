@@ -28,6 +28,7 @@ lang="${lang}">
     <title>${title|striphtml} | ${blog_title|striphtml}</title>
 
     ${html_stylesheets()}
+    ${html_feedlinks()}
     %if permalink:
       <link rel="canonical" href="${abs_link(permalink)}">
     %endif
@@ -82,6 +83,19 @@ lang="${lang}">
     %endif
 </%def>
 
+<%def name="html_feedlinks()">
+    %if rss_link:
+        ${rss_link}
+    %elif generate_rss:
+        %if len(translations) > 1:
+            %for language in translations:
+                <link rel="alternate" type="application/rss+xml" title="RSS (${language})" href="${_link('rss', None, language)}">
+            %endfor
+        %else:
+            <link rel="alternate" type="application/rss+xml" title="RSS" href="${_link('rss', None)}">
+        %endif
+    %endif
+</%def>
 
 <%def name="late_load_js()">
     %if use_bundles:

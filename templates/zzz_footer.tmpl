@@ -29,6 +29,8 @@
                     %endif
 
                     ${html_feedlinks()}
+
+                    <a href="${_link('rss', None, lang)}" target="_blank">
                         <li> <i class="icon-rss icon-large"></i> 
                         </li>
                     </a>
@@ -43,19 +45,4 @@
             ${template_hooks['page_footer']()}
         </div>
     </footer>
-</%def>
-
-<%def name="html_feedlinks()">
-    %if rss_link:
-        ${rss_link}
-    %elif generate_rss:
-        %if len(translations) > 1:
-            %for language in translations:
-                <a rel="alternate" type="application/rss+xml" title="RSS (${language})" href="${_link('rss', None, language)}">
-            %endfor
-        %else:
-            <a rel="alternate" type="application/rss+xml" title="RSS"
-            href="${_link('rss', None)}">
-        %endif
-    %endif
 </%def>
