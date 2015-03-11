@@ -265,6 +265,16 @@ div.topic {
     margin: 0;
     font-size: 20px;
 }
+
+.entry-overview h1,
+.entry-overview h2,
+.entry-overview h3,
+.entry-overview h4,
+.entry-overview h5,
+.entry-overview h6 {
+    text-shadow: none;
+}
+
 .entry-overview .summary,
 .entry-overview .date,
 .entry-overview .summary small {
