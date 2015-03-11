@@ -10,7 +10,8 @@ body {
   background-image: linear-gradient(150deg, #c4ffbf 0px, #f3fff2 300px);
 }
 pre {
-  background-color: #dbffd9;
+  /*background-color: #dbffd9;*/
+  background-color: rgba(219, 255, 217, 0.7);
 }
 .header {
   background-color: #f3fff2;

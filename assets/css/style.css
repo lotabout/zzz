@@ -5,7 +5,8 @@ body {
     /* font: 18px/25px'Palatino', 'Palatino Linotype', 'Georgia', serif, Fangsong, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei; */
     margin: 0;
     padding: 0;
-    color: #5C5C5C;
+    color: #3C3C3C;
+    font-family: "Avenir,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif";
 }
 
 /*header*/
@@ -285,6 +286,7 @@ a {
 a:hover {
     color: #3b185f;
 }
+
 /* h1 a:hover, h2 a:hover, */
 
 /* h3 a:hover, h4 a:hover      { color: #432165; text-decoration: underline; } */
@@ -348,6 +350,40 @@ h3 a:hover,
     display:block;
     height:50px; /* fixed header height*/
     margin:-50px 0 0; /* negative fixed header height */
+}
+
+/* meta align middle */
+.meta {
+    display: table;
+    width: 100%;
+}
+
+.meta .left{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.meta .right{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.meta .tags {
+    opacity: 0.7;
+    transition: opacity 0.2s linear 0s;
+}
+.meta .tags:hover {
+    opacity: 1;
+}
+
+.meta a {
+    text-decoration: none;
+}
+
+/* Paragraph */
+p + p {
+  text-indent: 1.5em;
 }
 
 /* setting size according to screen */
@@ -500,3 +536,54 @@ a.red:hover  {
 }
 
 
+/* ========================================================
+ * */
+blockquote {
+    position: relative;
+    color: #999;
+    font-weight:300;
+    font-family:Avenir, 'Helvetica Neue', 'Microsoft Yahei', 'Hiragino Sans GB', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+    border-left:1px solid #1abc9c;
+    padding-left:1em;
+    margin:1em 3em 1em 2em;
+}
+
+/* ========================================================
+ * Overrite Styles in rst.css */
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+    margin: 0px;
+}
+
+pre.code .ln { color: grey; } /* line numbers */
+pre.code, code { background-color: #eeeeee; }
+pre.code .comment, code .comment { color: #5C6576 }
+pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
+pre.code .literal.string, code .literal.string { color: #0C5404 }
+pre.code .name.builtin, code .name.builtin { color: #352B84 }
+pre.code .deleted, code .deleted { background-color: #DEB0A1}
+pre.code .inserted, code .inserted { background-color: #A3D289}
+
+pre {
+    padding: 10px;
+    margin: 7px 0px 10px;
+    border: 1px solid #DDD;
+    font-family: Monaco, Menlo, Consolas, "Deja Vu Sans Mono", "Courier New", monospace;
+    font-size: 0.85em;
+    overflow: auto;
+}
+
+code {
+  padding: 2px 4px;
+  background-color: #f7f7f9;
+  border: 1px solid #BBB;
+  white-space: nowrap;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
