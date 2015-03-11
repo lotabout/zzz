@@ -239,6 +239,78 @@ nav a:hover,
     font-size: 1.1em;
 }
 
+/* index page entry-overview */
+.entry-overview h1,
+.entry-overview .summary,
+.entry-overview .summary p {
+    display: inline;
+    line-height: 25px;
+}
+.entry-overview h1 {
+    margin: 0;
+    font-size: 20px;
+}
+.entry-overview .summary,
+.entry-overview .date,
+.entry-overview .summary small {
+    margin: 0;
+    padding: 0;
+    color: #777;
+}
+.entry-overview .date {
+    color: #777;
+    font-style: italic;
+    font-family: 'Noticia Text', serif;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+
+/* anchors */
+
+a {
+    /*color: #432165;*/
+    color: #4785CC;
+}
+
+a {
+    font: 18px/25px 'Palatino', 'Palatino Linotype', 'Georgia', Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, serif;
+}
+/* a {text-decoration: none;} */
+
+a:hover {
+    color: #3b185f;
+}
+/* h1 a:hover, h2 a:hover, */
+
+/* h3 a:hover, h4 a:hover      { color: #432165; text-decoration: underline; } */
+
+a:focus,
+a:active {
+    outline: none;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    text-decoration: none;
+}
+h1 a,
+h2 a,
+h3 a,
+.archive a,
+.pagination a,
+.tags a {
+    line-height: 32px;
+    padding: 3px;
+}
+
 /* setting size according to screen */
 @media (min-width: 0px) {
 
@@ -255,6 +327,15 @@ nav a:hover,
     .scroll a {
         padding: 18px 15px 13px 15px;
         margin-top:-15px;
+    }
+
+    .entry-overview {
+        margin: 10px 0px 12px 0px;
+        clear: left;
+    }
+    .entry-overview .separator {
+        padding-bottom: 2px;
+        margin-bottom: 2px;
     }
 }
 
@@ -289,6 +370,27 @@ nav a:hover,
     .scroll a, .brand a {
         font-size: 28px;
         line-height: 17px
+    }
+
+
+    .entry-overview {
+        margin: 25px 20px 25px 12px;
+        clear: left;
+    }
+    .entry-overview .date {
+        float: left;
+        width: 100px;
+        text-align: left;
+        line-height: 33px
+    }
+    .entry-overview .detail {
+        margin-left: 140px;
+    }
+    .entry-overview .index-tag {
+      float:right;
+    }
+    .entry-overview .separator {
+      display: none;
     }
 }
 

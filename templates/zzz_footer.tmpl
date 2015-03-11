@@ -8,14 +8,14 @@
             <div class="social pull-left">
                 <ul>
                     %if email:
-                    <a href="mailto:email" target="_blank">
+                    <a href="mailto:${email}" target="_blank">
                         <li><i class="icon-envelope icon-large"></i> 
                         </li>
                     </a>
                     %endif
 
                     %if twitter:
-                    <a href="http://twitter.com/{{ TWITTER_USERNAME }}" target="_blank">
+                    <a href="http://twitter.com/${twitter}" target="_blank">
                         <li><i class="icon-twitter-sign icon-large"></i>
                         </li>
                     </a>
