@@ -8,6 +8,14 @@ body {
     color: #3C3C3C;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Palatino', 'Palatino Linotype', 'Georgia', Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, serif;
+}
+
+body, button, input, select, textarea{
+    font-family: Avenir, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+}
+
 /*header*/
 .header {
     position: fixed;
@@ -263,6 +271,7 @@ div.topic {
     padding: 0;
     color: #777;
 }
+
 .entry-overview .date {
     color: #777;
     font-style: italic;
