@@ -10,6 +10,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Palatino', 'Palatino Linotype', 'Georgia', Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, serif;
+    text-shadow: 1px 1px 1px;
 }
 
 body, button, input, select, textarea{
