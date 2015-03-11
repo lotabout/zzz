@@ -6,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
     color: #3C3C3C;
-    font-family: "Avenir,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans-serif";
 }
 
 /*header*/
@@ -238,6 +237,12 @@ nav a:hover,
 .body {
     clear: both;
     font-size: 1.1em;
+}
+
+/* table of contents */
+div.topic {
+    border-left: solid;
+    padding-left: 2em;
 }
 
 /* index page entry-overview */
@@ -557,17 +562,9 @@ pre.address {
 
 
 pre.literal-block, pre.doctest-block, pre.math, pre.code {
-    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
-
-pre.code .ln { color: grey; } /* line numbers */
-pre.code, code { background-color: #eeeeee; }
-pre.code .comment, code .comment { color: #5C6576 }
-pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
-pre.code .literal.string, code .literal.string { color: #0C5404 }
-pre.code .name.builtin, code .name.builtin { color: #352B84 }
-pre.code .deleted, code .deleted { background-color: #DEB0A1}
-pre.code .inserted, code .inserted { background-color: #A3D289}
 
 pre {
     padding: 10px;
@@ -586,4 +583,9 @@ code {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}
+
+.linenodiv a {
+    text-decoration: none;
+    font-family: Monaco, Menlo, Consolas, "Deja Vu Sans Mono", "Courier New", monospace;
 }
