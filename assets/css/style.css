@@ -311,6 +311,37 @@ h3 a,
     padding: 3px;
 }
 
+/* index tag links */
+
+.index-tag {
+    font-size: 14px;
+    color: #777;
+}
+.tagcloud a,
+.index-tag a {
+    /* color: #7AA0CC; */
+    color: #777;
+    padding: 3px;
+    text-decoration: none;
+}
+
+a.active,
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+.pagination a:hover,
+.archive a:hover,
+.tags a:hover,
+.tagcloud a:hover,
+.index-tag a:hover,
+.navigation a:hover,
+.scroll a:hover,
+.social a:hover
+{
+    background-color: #777;
+    color: #FCFCFA;
+}
+
 /* setting size according to screen */
 @media (min-width: 0px) {
 
@@ -401,3 +432,61 @@ h3 a,
     }
 }
 
+
+/* Colors */
+.navy {
+color: #001F3F; }
+.blue {
+color: #0074D9; }
+.aqua {
+color: #7FDBFF; }
+.teal {
+color: #39CCCC; }
+.olive {
+color: #3D9970; }
+.green {
+color: #2ECC40; }
+.lime {
+color: #01FF70; }
+.yellow {
+color: #FFDC00; }
+.orange {
+color: #FF851B; }
+.red {
+color: #FF4136; }
+.fuchsia {
+color: #F012BE; }
+.purple {
+color: #B10DC9; }
+.maroon {
+color: #85144B; }
+.white {
+color: #fff; }
+.silver {
+color: #ddd; }
+.gray {
+color: #aaa; }
+.black {
+color: #111; }
+
+a.green {
+    color: #2ECC40;
+}
+a.green:hover  {
+    color: #FCFCFA;
+    background-color: #2ECC40;
+}
+a.blue {
+    color: #0074D9;
+}
+a.blue:hover  {
+    color: #FCFCFA;
+    background-color: #0074D9;
+}
+a.red {
+    color: #FF4136;
+}
+a.red:hover  {
+    color: #FCFCFA;
+    background-color: #FF4136;
+}

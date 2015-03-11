@@ -63,8 +63,10 @@ lang="${lang}">
     %if use_bundles:
         %if use_cdn:
             <link href="/assets/css/all.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" id='css_theme' href="/assets/css/theme.gray.css" type="text/css"/>
         %else:
             <link href="/assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" id='css_theme' href="/assets/css/theme.gray.css" type="text/css"/>
         %endif
     %else:
         <link href="/assets/css/font-awesome.css" rel="stylesheet" type="text/css">
@@ -72,7 +74,7 @@ lang="${lang}">
         <link href="/assets/css/code.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
         <link href="/assets/css/flip.css" rel="stylesheet" type="text/css">
-        <link href="/assets/css/theme.gray.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" id='css_theme' href="/assets/css/theme.gray.css" type="text/css"/>
 
         %if has_custom_css:
             <link href="/assets/css/custom.css" rel="stylesheet" type="text/css">
