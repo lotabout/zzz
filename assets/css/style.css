@@ -295,7 +295,6 @@ div.topic {
     content: "";
 }
 
-
 /* anchors */
 
 a {
@@ -609,3 +608,65 @@ code {
     text-decoration: none;
     font-family: Monaco, Menlo, Consolas, "Deja Vu Sans Mono", "Courier New", monospace;
 }
+
+
+
+
+
+
+
+
+/* ======================================================
+ * New format
+ * ======================================================*/
+.info {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+}
+
+.num-of-comments:after {
+    content: "cmmts";
+}
+
+.num-of-comments {
+    float: left;
+    display: inline-block;
+    width: 20%;
+}
+
+.post-entry .title {
+    display: inline-block;
+}
+
+.post-entry .tags {
+    float: right;
+}
+
+.post-entry .tags:after {
+    content: "";
+    border-bottom: 1px solid red;
+    position: absolute;
+    width: 100%;
+    left: 0px
+}
+
+.post-entry .tags ul {
+    margin: 0px;
+}
+
+.post-entry .tags li {
+    text-decoration: none;
+    list-style: none;
+    display: inline-block;
+}
+
+.post-entry time {
+    float: right;
+    clear: both;
+}
+
+.post-entry .description {
+    padding-right: 120px;
+}
+
