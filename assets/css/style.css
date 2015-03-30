@@ -922,6 +922,72 @@ nav,
 }
 
 /* responsive layout */
+
+@media (min-width: 0px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+    .container {
+        width: auto;
+        padding: 0 8px;
+    }
+    .pagination a {
+        font-size: 14px;
+        padding: 3px;
+    }
+    /* .navigation {margin-top:15px;} */
+    .scroll,
+    .brand {
+        height: 22px;
+    }
+    .scroll a,
+    .brand a {
+        font-size: 22px;
+        line-height: 4px;
+        padding: 4px 8px;
+    }
+    .scroll a {
+        padding: 18px 15px 13px 15px;
+        margin-top:-15px;
+    }
+    .pagination .prev a,
+    .pagination .next a {
+        font-size: 22px;
+        padding: 12px 15px 5px 15px;
+    }
+    .pagination .page a {
+        font-size: 20px;
+    }
+    .navigation {
+        height: 22px;
+    }
+    .navigation a {
+        font-size: 14px;
+        line-height: 11px;
+        padding: 12px 3px 6px;
+    }
+    .header .separator {
+        padding-bottom: 21px;
+        margin-bottom: 0px;
+    }
+    .entry-overview {
+        margin: 10px 0px 12px 0px;
+        clear: left;
+    }
+    .entry-overview .separator {
+        padding-bottom: 2px;
+        margin-bottom: 2px;
+    }
+    .separator {
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+    }
+    .body {
+        padding-top: 50px;
+    }
+    footer.footer {
+        display: none;
+    }
+}
+
 @media (min-width: 641px) {
     .body {
         padding-top: 50px;
