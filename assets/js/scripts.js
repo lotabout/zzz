@@ -66,7 +66,6 @@ jQuery(function($) {
         //$(".body").fitVids();
         headerNav();
         loadTheme();
-        console.log("HHHHHHHHHH");
         // $('#history-back').on('click',function(e){
         //     e.preventDefault();
         //     window.History.back();
