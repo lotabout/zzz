@@ -693,10 +693,12 @@ a {
 .post-entry time {
     float: right;
     clear: both;
+    font-size: 0.9em;
 }
 
 .post-entry .description {
     padding-right: 120px;
+    font-size: 0.9em;
 }
 
 
