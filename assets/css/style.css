@@ -718,7 +718,6 @@ nav a:hover,
     padding-top: 0.5ex;
     padding-left: 0.2ex;
     padding-right: 0.2ex;
-    background-color: #EEE;
     border-radius: 2px 2px 0px 0px;
     border: 0.5px solid #BBB;
 }
@@ -921,72 +920,96 @@ nav,
     margin:-50px 0 0; /* negative fixed header height */
 }
 
+/* Article */
+
+/* meta align middle */
+.meta {
+    display: table;
+    width: 100%;
+}
+
+.meta .left{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.meta .right{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.meta .tags {
+    opacity: 0.7;
+    transition: opacity 0.2s linear 0s;
+}
+.meta .tags:hover {
+    opacity: 1;
+}
+
+.meta a {
+    text-decoration: none;
+}
+
+
+/* Main contents */
+/* table of contents */
+div.topic {
+    border-left: solid;
+    padding-left: 2em;
+}
+
+div.authordate {
+    font-size: 0.9em;
+}
+
+div.authordate time{
+    padding: 0px 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Palatino', 'Palatino Linotype', 'Georgia', Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, serif;
+}
+
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5,
+.section h6 {
+    border-bottom: 1px solid #AAA;
+}
+
+
+
+
+.body {
+    clear: both;
+    font-size: 1.1em;
+}
+
+/* code blocks */
+pre {
+    padding: 10px;
+    margin: 7px 0px 10px;
+    border: 1px solid #DDD;
+    font-family: Monaco, Menlo, Consolas, "Deja Vu Sans Mono", "Courier New", monospace;
+    font-size: 0.85em;
+    overflow: auto;
+}
+
+code {
+  padding: 2px 4px;
+  background-color: #f7f7f9;
+  border: 1px solid #BBB;
+  white-space: nowrap;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
 /* responsive layout */
 
-@media (min-width: 0px) {
-    /* smartphones, iPhone, portrait 480x320 phones */
-    .container {
-        width: auto;
-        padding: 0 8px;
-    }
-    .pagination a {
-        font-size: 14px;
-        padding: 3px;
-    }
-    /* .navigation {margin-top:15px;} */
-    .scroll,
-    .brand {
-        height: 22px;
-    }
-    .scroll a,
-    .brand a {
-        font-size: 22px;
-        line-height: 4px;
-        padding: 4px 8px;
-    }
-    .scroll a {
-        padding: 18px 15px 13px 15px;
-        margin-top:-15px;
-    }
-    .pagination .prev a,
-    .pagination .next a {
-        font-size: 22px;
-        padding: 12px 15px 5px 15px;
-    }
-    .pagination .page a {
-        font-size: 20px;
-    }
-    .navigation {
-        height: 22px;
-    }
-    .navigation a {
-        font-size: 14px;
-        line-height: 11px;
-        padding: 12px 3px 6px;
-    }
-    .header .separator {
-        padding-bottom: 21px;
-        margin-bottom: 0px;
-    }
-    .entry-overview {
-        margin: 10px 0px 12px 0px;
-        clear: left;
-    }
-    .entry-overview .separator {
-        padding-bottom: 2px;
-        margin-bottom: 2px;
-    }
-    .separator {
-        padding-bottom: 22px;
-        margin-bottom: 22px;
-    }
-    .body {
-        padding-top: 50px;
-    }
-    footer.footer {
-        display: none;
-    }
-}
 
 @media (min-width: 641px) {
     .body {
