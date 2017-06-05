@@ -1,3 +1,6 @@
+This repository is now managed by [nikola-themes](https://github.com/getnikola/nikola-themes/tree/master/v7/lotabout) directly. This repository is not longer maintained since I stop using nikola. Good Luck :)
+
+
 Thanks to [flasky](https://github.com/fjavieralba/flasky) and
 [Wu](https://github.com/rykka/wu). This theme trys to introduce the beautiful
 theme into nikola.
